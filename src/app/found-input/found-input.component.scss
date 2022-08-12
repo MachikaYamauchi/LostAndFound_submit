@@ -1,0 +1,76 @@
+.page_title {
+  margin-top: 56px;
+  display: flex;
+  justify-content: center;
+  h1 {
+    font-size: 64px;
+  }
+}
+.post-wrap {
+  padding: 3rem 5rem;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button.submit_btn {
+    background-color: #1477EC;
+    border-color: #1477EC;
+    padding: 8px 24px;
+    width: 20%;
+    border-radius: 10px;
+    color: white;
+  }
+  a {
+    display: block;
+  }
+}
+
+.container {
+  width: 80%;
+  padding: 3rem;
+  border-bottom: 10px solid #1477EC;
+  border-radius: 10px;
+  background-color: #F8F2F2;
+}
+
+.btn_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  button {
+    padding: 8px 24px;
+    width: 80%;
+    border-radius: 10px;
+    color: white;
+  }
+  button.lost {
+    background-color: #F40909;
+    border-color: #F40909;
+    margin-right: 24px;
+  }
+  button.found {
+    background-color: #1477EC;
+    border-color: #1477EC;
+  }
+}
+
+
+
+.required-label{
+  font-size: .6rem;
+  color: red;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 50%;
+  }
+}

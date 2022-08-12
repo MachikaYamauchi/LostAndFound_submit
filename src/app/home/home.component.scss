@@ -1,0 +1,92 @@
+.submit_wrapper {
+  padding: 16px;
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.accordion{
+  width:80%;
+  margin:0 auto;
+}
+
+.imageContainer{
+  width:100%;
+  display:flex;
+  justify-content:center;
+
+}
+
+.imageContainer img{
+  width:150px;
+  margin:2%;
+}
+
+.descripton{
+  width:100%;
+}
+
+.btn-primary{
+  border:1px solid black;
+  padding:2 5%
+}
+
+.contact-information{
+  display: none;
+}
+
+.contact-information.active{
+  display: block;
+}
+.card-desc {
+  padding: 10px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.card-image {
+  display: flex;
+}
+
+div.card-image img {
+  width: 50%;
+  height: auto;
+}
+
+.title {
+  img {
+    width: 30%;
+  }
+  .title_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .locationDate {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+
+
+button {
+  background-color: blue;
+  padding: 24px;
+}
+
+.item {
+  margin-bottom: 40px;
+}
+
+.display {
+  animation: showup 2s;
+}
+
+@keyframes showup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

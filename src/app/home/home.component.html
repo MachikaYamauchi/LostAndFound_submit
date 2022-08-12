@@ -1,0 +1,115 @@
+<div class="btn_wrapper">
+  <button (click)="lost()">I Lost</button>
+  <button>I Found!!</button>
+</div>
+
+
+
+
+
+<div class="container">
+  <div class="col item" *ngFor="let post of posts.data; let i = index" class="post">
+    <div class="name">{{post.attributes.Title}}</div>
+    <button (click)="expand(post.id, itemCard)">claim</button>
+    <div class="contact" #itemCard [hidden]="showContact">
+      <p>{{post.attributes.Title}}</p>
+    </div>
+  </div>
+</div>
+
+<h1>Lostor Found Something?</h1>
+<div class="submit_wrapper">
+  <a routerLink="/lostInput">SUBMIT AN ITEM</a>
+</div>
+<hr>
+<h2>Listings</h2>
+
+<!-- <div class="container">
+  <div *ngFor="let post of posts.data" class="post">
+
+    <h2>{{post.attributes.Title}}</h2>
+    <div class="image">
+        {{post.attributes.Image}}
+    </div>
+    <div class="description">
+    {{post.attributes.Description}}
+    </div>
+
+    <p>{{post.attributes.Claim}}</p>
+
+    <div>
+      <p>Date found : {{post.attributes.Date_found}}</p>
+      <p>Location : {{post.attributes.Location}}</p>
+      <p>Email: {{post.attributes.Email}}</p>
+      <p>Phone Number : {{post.attributes.Phonenumber}}</p>
+    </div>
+    <div class="btn_wrapper">
+      <a [routerLink]="['/posts', post.id]">View</a>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- <div class="accordion" id="accordionPanelsStayOpenExample container">
+  <div class="accordion-item" *ngFor="let post of posts.data" class="post">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+      <div class="container title">
+        <div class="row">
+          <div class="col-6 title_text">
+            <h2>{{post.attributes.Title}}</h2>
+            <div class="locationDate">
+              <p>{{post.attributes.Date_found}}</p>
+              <p>{{post.attributes.Location}}</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <img class="image" src="https://cdn.vox-cdn.com/thumbor/6p3i4vIm2bWpSCt3hZUi8gIyuB8=/0x0:2040x1360/1520x1013/filters:focal(877x866:1203x1192):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66397697/akrales_181019_3014_0770.0.jpg">
+          </div>
+        </div>
+          <p>Sub-heading</p> -->
+      <!-- </div>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+
+          <p class="descripton">{{post.attributes.Description}}</p>
+
+          <div class="imageContainer">
+              <img class="image" src="https://cdn.vox-cdn.com/thumbor/6p3i4vIm2bWpSCt3hZUi8gIyuB8=/0x0:2040x1360/1520x1013/filters:focal(877x866:1203x1192):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66397697/akrales_181019_3014_0770.0.jpg">
+              <img class="image"  src="https://i.insider.com/61f968484faa730018ff3fdf?width=1000&format=jpeg&auto=webp">
+          </div>
+
+          <p>Date Found:{{post.attributes.Date_found}}</p>
+          <p>Location Found:{{post.attributes.Location}}</p>
+                <!-- Toggle Btn -->
+                <button (click)="getInfo()"  class="btn btn-primary">CLAM</button>
+
+        <!-- Contact Info -->
+        <!-- <div [class.active]="showInfo" class="contact-information">
+          <div class="card-container">
+            <div class="float-layout">
+              <div class="card-image">
+                <img
+                  src="data:image/jpeg;base64,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"
+                />
+                <div class="card">
+                  <div class="card-title">Title</div>
+                  <div class="card-title">Contact Email: test@email.com</div>
+                  <div class="card-title">Contact Number: 000-000-000</div>
+                  <div class="card-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ullamcorper mollis
+                    tempus. Mauris eu maximus lectus, eu auctor justo. Aenean porta purus vel commodo
+                    consequat.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+<!-- </div> -->
